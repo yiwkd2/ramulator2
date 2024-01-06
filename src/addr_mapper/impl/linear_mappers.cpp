@@ -123,4 +123,18 @@ class MOP4CLXOR final : public LinearMapperBase, public Implementation {
     }
 };
 
+class NONE final : public LinearMapperBase, public Implementation {
+  RAMULATOR_REGISTER_IMPLEMENTATION(IAddrMapper, NONE, "NONE", "Do nothing.");
+
+  public:
+    void init() override { };
+
+    void setup(IFrontEnd* frontend, IMemorySystem* memory_system) override {
+      LinearMapperBase::setup(frontend, memory_system);
+    }
+
+    void apply(Request& req) override {
+    }
+};
+
 }   // namespace Ramulator
