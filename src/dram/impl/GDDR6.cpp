@@ -21,6 +21,7 @@ class GDDR6 : public IDRAM, public Implementation {
     inline static const std::map<std::string, std::vector<int>> timing_presets = {
       //       name                rate   nBL  nCL  nRCDRD nRCDWD  nRP   nRAS  nRC   nWR  nRTP nCWL nCCDS nCCDL nRRDS nRRDL nWTRS nWTRL nFAW  nRFC nRFCpb nRREFD nREFI  tCK_ps
       {"GDDR6_2000_1350mV_double", {2000,  8,  24,    26,     16,  26,   53,   79,   26,   4,   6,   4,    6,    7,    7,   9,    11,   28,   210,  105,   14,   3333,   570}},
+      {"GDDR6_2000_1350mV_double16",{2000,16,  24,    26,     16,  26,   53,   79,   26,   4,   6,   4,    6,    7,    7,   9,    11,   28,   210,  105,   14,   3333,   570}},
       {"GDDR6_2000_1250mV_double", {2000,  8,  24,    30,     19,  30,   60,   89,   30,   4,   6,   4,    6,   11,   11,   9,    11,   42,   210,  105,   21,   3333,   570}},
       {"GDDR6_2000_1350mV_quad",   {2000,  4,  24,    26,     16,  26,   53,   79,   26,   4,   6,   4,    6,    7,    7,   9,    11,   28,   210,  105,   14,   3333,   570}},
       {"GDDR6_2000_1250mV_quad",   {2000,  4,  24,    30,     19,  30,   60,   89,   30,   4,   6,   4,    6,   11,   11,   9,    11,   42,   210,  105,   21,   3333,   570}},
