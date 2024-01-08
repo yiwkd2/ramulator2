@@ -13,6 +13,7 @@ target_sources(
   impl/processor/simpleO3/trace.h     impl/processor/simpleO3/trace.cpp
 
   impl/external_wrapper/gem5_frontend.cpp
+  impl/external_wrapper/usim_frontend.cpp
 )
 
 target_link_libraries(
