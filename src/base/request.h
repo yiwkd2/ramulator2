@@ -60,6 +60,10 @@ struct ReqBuffer {
     }
   }
 
+  bool can_accept() {
+    return buffer.size() < max_size;
+  }
+
   void remove(iterator it) {
     buffer.erase(it);
   }

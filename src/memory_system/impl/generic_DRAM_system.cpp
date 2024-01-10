@@ -71,6 +71,10 @@ class GenericDRAMSystem final : public IMemorySystem, public Implementation {
 
       return is_success;
     };
+
+    bool can_accept(unsigned channel_id, int req_type) override {
+        return m_controllers[channel_id]->can_accept(req_type);
+    }
     
     void tick() override {
       m_clk++;

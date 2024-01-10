@@ -24,6 +24,10 @@ class DummyController final : public IDRAMController, public Implementation {
       return true; 
     };
 
+    bool can_accept(int req_type) override {
+      return true;
+    }
+
     void tick() override {
       return;
     }

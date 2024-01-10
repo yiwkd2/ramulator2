@@ -51,6 +51,8 @@ class IMemorySystem : public TopLevel<IMemorySystem> {
      */
     virtual bool send(Request req) = 0;
 
+    virtual bool can_accept(unsigned channel_id, int req_type) = 0;
+
     /**
      * @brief         Ticks the memory system
      * 

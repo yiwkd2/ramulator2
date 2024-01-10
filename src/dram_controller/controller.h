@@ -41,6 +41,8 @@ class IDRAMController : public Clocked<IDRAMController> {
      */
     virtual bool priority_send(Request& req) = 0;
 
+    virtual bool can_accept(int req_type) = 0;
+
     /**
      * @brief       Ticks the memory controller.
      * 

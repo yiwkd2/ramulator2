@@ -17,6 +17,10 @@ class DummyMemorySystem final : public IMemorySystem, public Implementation {
       return true; 
     };
 
+    bool can_accept(unsigned channel_id, int req_type) override {
+      return true;
+    }
+
     void tick() override {};
 };
   

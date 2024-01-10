@@ -91,6 +91,14 @@ class GenericDRAMController final : public IDRAMController, public Implementatio
       return is_success;
     }
 
+    bool can_accept(int req_type) override {
+        if (req_type == Request::Type::Read) {
+            return m_read_buffer.can_accept();
+        } else {
+            return m_write_buffer.can_accept();
+        }
+    }
+
     void tick() override {
       m_clk++;
 

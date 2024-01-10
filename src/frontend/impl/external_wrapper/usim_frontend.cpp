@@ -19,6 +19,10 @@ class USIM : public IFrontEnd, public Implementation {
       return m_memory_system->send(req);
     }
 
+    bool can_accept(unsigned channel_id, int req_type) {
+      return m_memory_system->can_accept(channel_id, req_type);
+    }
+
   private:
     bool is_finished() override { return true; };
 };
